@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "wwwroot/css/bootstrap.css",
+    "inputFile": "../../../../Users/jrn/.nuget/packages/bootstrap.sass/5.0.2/contentFiles/any/any/wwwroot/scss/bootstrap.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/site.css",
+    "inputFile": "wwwroot/css/site.scss"
+  }
+]
