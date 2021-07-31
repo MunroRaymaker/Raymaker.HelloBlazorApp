@@ -1,4 +1,5 @@
 ﻿@page "/counter"
+@page "/counter/{startingCount:int}"
 
 <h1>Counter</h1>
 
@@ -10,7 +11,15 @@
     private int currentCount = 0;
 
     [Parameter]
+    public int StartingCount { get; set; } = 0;
+
+    [Parameter]
     public int IncrementAmount { get; set; } = 1;
+
+    protected override void OnInitialized()
+    {
+        currentCount = StartingCount;
+    }    
 
     private void IncrementCount()
     {
