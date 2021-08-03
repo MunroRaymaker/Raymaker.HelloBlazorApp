@@ -1,0 +1,42 @@
+﻿@page "/interop"
+@inject IJSRuntime JsRuntime
+
+<h1>JS Interop</h1>
+<h3>Create Alert</h3>
+<p>Hello everybody.</p>
+<button class="btn btn-success" @onclick="ShowAlert">Show Alert</button>
+
+<h3>Create Alert</h3>
+<p>Write a question.</p>
+<input @bind="question" />
+<button class="btn btn-warning" @onclick="AskQuestion">Ask Question</button>
+
+<div>The answer was: <span id="answerSpan"></span></div>
+
+<h3>Please focus</h3>
+<input @ref="InputToFocus" />
+<button class="btn btn-danger" @onclick="Focus">Focus!</button>
+
+
+@code {
+
+    string question = string.Empty;
+
+    ElementReference InputToFocus;
+
+    async Task ShowAlert()
+    {
+        await JsRuntime.InvokeVoidAsync("showAlert");
+    }
+
+    async Task Focus()
+    {
+        await JsRuntime.InvokeVoidAsync("focusOnElement", InputToFocus);
+    }
+
+    async Task AskQuestion()
+    {
+        var response = await JsRuntime.InvokeAsync<string>("createPrompt", question);
+        await JsRuntime.InvokeVoidAsync("setElementTextById", "answerSpan", response);
+    }
+}

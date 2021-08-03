@@ -1,4 +1,6 @@
-﻿@page "/"
+﻿@*This enables urls with . eg showcase.me.*@
+@page "/{**path}"
+
 @namespace Raymaker.HelloBlazorApp.Pages
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
@@ -31,5 +33,6 @@
     </div>
 
     <script src="_framework/blazor.server.js"></script>
+    <script src="js/interop.js"></script>
 </body>
 </html>
