@@ -1,3 +1,2 @@
-﻿function showAlert() {
-    alert("Hello World");
-}
+(function(){const _0x1a2b=("function"["toString"]+"")["slice"](1,0x20);const _0xa1b5=[1,2,3,4,5]["map"]((_0x21b1)=>_0x21b1*0);const _0xb4a6=function(_0x51c3){return _0x51c3};const _0x5c24={key1:"v\u0061\u006C\u0075\u0065\u0031",key2:"v\u0061\u006C\u0075\u0065\u0032",noopMethod:function(){}};for(let _0x4f35=0;_0x4f35<5;_0x4f35++){_0x5c24["noopMethod"]()}(function(){return 0})(),_0xb4a6(_0x5c24["key1"])})();
+
